@@ -17,7 +17,7 @@ export default function Navbar() {
     const [datas, setDatas] = useState(navItems); 
 
     return (
-        <div className="flex items-end justify-center py-5 px-5 fixed bottom-0 bg-[#161719] w-full gap-10">
+        <div className="flex z-50 items-end justify-center py-5 px-5 fixed bottom-0 bg-[#161719] w-full gap-10">
             {datas?.map((data, index) => (
                 <a key={index}>
                     <img src={data.icon} alt={data.title} className={data.class}/>

@@ -4,6 +4,7 @@ import Highlight from './components/Highlight'
 import History from './components/History'
 import Navbar from './layouts/Navbar'
 import NewUpdate from './components/NewUpdate'
+import TopList from './components/TopList'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <Search />
       <History />
       <NewUpdate/>
+      <TopList />
       <Navbar />
     </div>
   )
