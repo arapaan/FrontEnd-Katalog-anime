@@ -1,5 +1,5 @@
-import history1 from '../assets/cover_history.jpg';
-import history2 from '../assets/cover_history1.jpg';
+import history1 from '../assets/kusuriya.jpg';
+import history2 from '../assets/cosmic.jpg';
 import history3 from '../assets/cover_history2.jpg';
 
 export default function History() {
