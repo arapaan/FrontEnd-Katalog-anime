@@ -35,11 +35,11 @@ function AnimeCard({anime, big = false}) {
             <div className='absolute h-full inset-0 flex flex-col justify-center items-center z-20'>
                 <div className={`flex flex-col justify-between z-30 items-end w-40 ${big ? 'h-[290px]' : 'h-[100px]'} bg-cover rounded-lg`}
                     style={{ backgroundImage: `url(${anime.image})` }}>
-                    <span className='flex items-center gap-1 px-2 bg-black/80 rounded-bl-xl'>
+                    <span className='flex absolute items-center gap-1 px-2 bg-black/80 rounded-bl-xl'>
                         <img src={star} alt="" className='w-3 h-3' />
                         {anime.rating.toFixed(2)}
                     </span>
-                    <span className='flex rounded-b-lg items-end bg-gradient-to-b from-black/10 to-black h-[50%] w-full'>
+                    <span className='flex rounded-b-lg items-end bg-gradient-to-b from-black/5 to-black/95 h-full w-full'>
                         <span className='px-2 py-2'>Eps {anime.eps}</span>
                     </span>
                 </div>
@@ -48,7 +48,7 @@ function AnimeCard({anime, big = false}) {
                         <img src={view2} alt="" className='w-4 h-4' />
                         {anime.views} views
                     </span>
-                    <span className='flex w-full items-end text-ellipsis overflow-hidden'>
+                    <span className='flex w-full items-end text-ellipsis truncate overflow-hidden'>
                         {anime.title}
                     </span>
                 </div>

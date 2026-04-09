@@ -1,14 +1,15 @@
 import view from '../assets/view.png';
 import cover from '../assets/testing _cover.jpg';
+import cover1 from '../assets/cover_history2.jpg';
 
 export default function Highlight() {
     return (        
-        <div className="flex w-full h-40 flex-col rounded-xl bg-cover" style={{ backgroundImage: `url(${cover})` }}>
+        <div className="flex w-full h-40 flex-col rounded-xl bg-cover bg-center" style={{ backgroundImage: `url(${cover})` }}>
             <div className='flex justify-between items-start text-white'>
                 <div className='bg-black/40 rounded-tl-xl py-2 px-3'>
                     <span className='font-extrabold text-xl'>#2</span>
                 </div>
-                <div className='flex justify-start items-center bg-[#2B2C31] rounded-3xl my-2 mx-3 py-4 px-4 h-4 gap-2'>
+                <div className='flex justify-start items-center font-bold bg-[#2B2C31] rounded-3xl my-2 mx-3 py-4 px-4 h-4 gap-2'>
                     <img src={view} alt="" className='h-5 w-5'/>
                     1.048.954
                 </div>

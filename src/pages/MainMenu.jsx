@@ -5,6 +5,7 @@ import History from "../components/History";
 import NewUpdate from "../components/NewUpdate";
 import TopList from "../components/TopList";
 import Navbar from "../layouts/Navbar";
+import Completed from "../components/Completed";
 
 export default function MainMenu() {
     return(
@@ -15,6 +16,7 @@ export default function MainMenu() {
             <History />
             <NewUpdate/>
             <TopList />
+            <Completed />
             <Navbar />
         </div>
     );
