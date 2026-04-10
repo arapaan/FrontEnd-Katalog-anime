@@ -6,7 +6,7 @@ import Navbar from './layouts/Navbar'
 import NewUpdate from './components/NewUpdate'
 import Header from './layouts/Header'
 import TopList from './components/TopList'
-import MainMenu from './pages/MainMenu'
+import MainMenu from './pages/MainMenuPage'
 
 function App() {
   const [count, setCount] = useState(0)
