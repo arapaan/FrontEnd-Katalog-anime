@@ -11,7 +11,7 @@ const navItems = [
     { icon: calender, title: 'Jadwal', path: '/schedule', class: 'w-5 h-5' },
     { icon: history, title: 'History', path: '/history', class: 'w-5 h-5' },
     { icon: subscribe, title: 'Subscribe', path: '', class: 'w-5 h-5' },
-    { icon: account, title: 'Profile', path: '', class: 'w-5 h-5' },
+    { icon: account, title: 'Profile', path: '/profile', class: 'w-5 h-5' },
 ];
 
 export default function Navbar() {
@@ -19,7 +19,7 @@ export default function Navbar() {
     const location = useLocation();
 
     return (
-        <div className='flex z-50 items-end justify-center max-h-20 py-5 px-5 fixed bottom-0 bg-[#161719] w-full gap-10'>
+        <div hidden className='md:flex z-50 items-end justify-center max-h-20 py-5 px-5 fixed bottom-0 bg-[#161719] w-full gap-10'>
             {navItems.map((item, index) => {
                 const isActive = location.pathname === item.path;
 
