@@ -23,9 +23,9 @@ function AnimeList() {
         <div className='relative mt-5'>
             <div className='flex flex-nowrap gap-5 overflow-x-auto'>
                 {animes.map(anime => (   
-                    <div className="flex flex-col w-40 rounded-t-xl shrink-0 text-wrap">
-                        <div className='h-16 bg-cover bg-center rounded-t-xl' style={{ backgroundImage: `url(${anime.image})` }}>
-                            <span className='flex h-full items-end bg-gradient-to-b from-black/10 to-black/80 w-full'>
+                    <div className="flex flex-col w-40 rounded-t-xl shrink-0 text-wrap overflow-hidden">
+                        <div className='h-16 md:h-56 bg-cover bg-center rounded-t-xl' style={{ backgroundImage: `url(${anime.image})` }}>
+                            <span className='flex h-full md:text-2xl items-end bg-gradient-to-b from-black/10 to-black/80 w-full'>
                                 <span className='px-2 py-2'>Eps {anime.eps}</span>
                             </span>
                         </div>
@@ -36,7 +36,7 @@ function AnimeList() {
                             ></div>
                         </div>
 
-                        <span>{anime.name}</span>
+                        <span className='md:text-2xl truncate'>{anime.name}</span>
                     </div>
                 ))}
             </div>
@@ -49,8 +49,8 @@ export default function History() {
     return (
         <div className="flex flex-col text-white justify-start">
             <div className="flex justify-between items-center w-full">
-                <span className="flex flex-col text-2xl"><span className="font-medium">Terakhir</span> Ditonton</span>
-                <span className="text-blue-500 text-lg font-medium">Lihat Lainnya!</span>
+                <span className="flex flex-col text-2xl md:text-3xl"><span className="font-medium">Terakhir</span> Ditonton</span>
+                <span className="text-blue-500 text-lg md:text-2xl font-medium">Lihat Lainnya!</span>
             </div>
                             
             <AnimeList />                                                                

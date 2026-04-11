@@ -14,7 +14,7 @@ const animeList = [
 
 function Schedule() {
     return(
-        <div className="flex gap-7 justify-center items-center font-bold shadow-sm shadow-gray-400 py-5 text-gray-400">
+        <div className="flex gap-7 md:gap-14 justify-center items-center md:text-xl font-bold shadow-sm shadow-gray-400 py-5 text-gray-400">
             <div className="flex flex-col justify-center items-center">
                 <span className="text-blue-600">Min</span>
                 <span className="py-1 px-3 rounded-lg text-white font-extrabold bg-blue-600">5</span>

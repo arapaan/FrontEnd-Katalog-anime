@@ -25,30 +25,30 @@ function groupAnime(list) {
 
 function AnimeCard({anime, big = false}) {
     return (
-        <div className={`${big ? 'h-[490px]' : 'h-[235px]'} w-full rounded-xl relative overflow-hidden`}>
+        <div className={`${big ? 'h-[490px] md:h-[520px]' : 'h-[235px] md:h-[250px]'} w-full rounded-xl relative overflow-hidden`}>
             <div className='absolute inset-0 bg-cover bg-center z-0'
                 style={{ backgroundImage: `url(${anime.image})` }} />
             <div className='absolute inset-0 bg-black/85 z-10' />
-            <div className='absolute top-0 left-0 bg-[#FFB200] text-black w-12 rounded-tl-xl rounded-br-xl px-3 z-30'>
-                <span className='font-bold text-xl'>#{anime.id}</span>
+            <div className='absolute top-0 left-0 bg-[#FFB200] text-black rounded-tl-xl rounded-br-xl px-3 z-30'>
+                <span className='font-bold text-xl md:text-3xl'>#{anime.id}</span>
             </div>
-            <div className='absolute h-full inset-0 flex flex-col justify-center items-center z-20'>
-                <div className={`flex flex-col justify-between z-30 items-end w-40 ${big ? 'h-[290px]' : 'h-[100px]'} bg-cover rounded-lg`}
+            <div className='absolute h-full inset-0 flex flex-col justify-center items-center z-20 overflow-hidden'>
+                <div className={`flex flex-col justify-between z-30 items-end w-40 ${big ? 'h-[290px] md:h-[380px]' : 'h-[100px] md:h-[140px]'} bg-cover rounded-lg`}
                     style={{ backgroundImage: `url(${anime.image})` }}>
-                    <span className='flex absolute items-center gap-1 px-2 bg-black/80 rounded-bl-xl'>
-                        <img src={star} alt="" className='w-3 h-3' />
+                    <span className='flex absolute items-center md:text-xl gap-1 px-2 bg-black/80 rounded-bl-xl'>
+                        <img src={star} alt="" className='w-3 h-3 md:w-4 md:h-4' />
                         {anime.rating.toFixed(2)}
                     </span>
                     <span className='flex rounded-b-lg items-end bg-gradient-to-b from-black/5 to-black/95 h-full w-full'>
-                        <span className='px-2 py-2'>Eps {anime.eps}</span>
+                        <span className='px-2 py-2 md:text-xl'>Eps {anime.eps}</span>
                     </span>
                 </div>
                 <div className='pr-4 pl-4 flex flex-col w-full justify-between overflow-hidden z-30 items-start'>
-                    <span className={`flex items-center gap-1 px-2 text-[#C4C7CC] ${big ? 'mb-10' : ''}`}>
+                    <span className={`flex items-center md:text-lg gap-1 px-2 text-[#C4C7CC] ${big ? 'mb-10' : ''}`}>
                         <img src={view2} alt="" className='w-4 h-4' />
                         {anime.views} views
                     </span>
-                    <span className='flex w-full items-end text-ellipsis truncate overflow-hidden'>
+                    <span className='flex w-full items-end text-xl truncate'>
                         {anime.title}
                     </span>
                 </div>
@@ -63,10 +63,10 @@ export default function TopList() {
     return(
         <div className="flex flex-col text-white justify-start">
             <div className="flex justify-between items-center w-full">
-                <span className="flex flex-col text-2xl">
+                <span className="flex flex-col text-2xl md:text-3xl">
                     <span className="font-medium">Hot</span> Anime
                 </span>
-                <span className="text-blue-500 text-lg font-medium">Lihat Peringkat Anime!</span>
+                <span className="text-blue-500 text-lg md:text-2xl font-medium">Lihat Peringkat Anime!</span>
             </div>
 
             <div className='relative mt-5'>
